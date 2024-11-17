@@ -11,7 +11,7 @@ CHIP DecoderSegment<your student number> {
         And(a=notA, b=notB, c=notC, d=notD, out=temp1);
         And(a=notA, b=notB, c=C, d=notD, out=temp2);
         And(a=notA, b=B, c=C, d=notD, out=temp3);
-        And(a=A, b=~B, c=notC, d=notD, out=temp4);
+        And(a=A, b=notB, c=notC, d=notD, out=temp4);
         And(a=A, b=notB, c=C, d=notD, out=temp5);
         And(a=A, b=notB, c=C, d=D, out=temp6);
         And(a=A, b=B, c=notC, d=notD, out=temp7);
