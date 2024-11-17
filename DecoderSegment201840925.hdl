@@ -12,33 +12,54 @@ CHIP DecoderSegment201840925{
         And(a=notC, b=and1, out=and2);
         And(a=and2, b=notD, out=temp1);
 
-        And(a=notA, b=notB, out=and3);
-        And(a=and3, b=C, out=and4);
+        And(a=notA, b=B, out=and3);
+        And(a=and3, b=notC, out=and4);
         And(a=and4, b=notD, out=temp2);
 
         And(a=notA, b=B, out=and5);
-        And(a=and5, b=C, out=and6);
-        And(a=and6, b=notD, out=temp3);
+        And(a=and5, b=notC, out=and6);
+        And(a=and6, b=D, out=temp3);
 
-        And(a=A, b=notB, out=and7);
-        And(a=and7, b=notC, out=and8);
+        And(a=notA, b=B, out=and7);
+        And(a=and7, b=C, out=and8);
         And(a=and8, b=notD, out=temp4);
         
         And(a=A, b=notB, out=and9);
-        And(a=and9, b=C, out=and10);
+        And(a=and9, b=notC, out=and10);
         And(a=and10, b=notD, out=temp5);
 
         And(a=A, b=notB, out=and11);
-        And(a=and11, b=C, out=and12);
+        And(a=and11, b=notC, out=and12);
         And(a=and12, b=D, out=temp6);
 
-        And(a=A, b=B, out=and13);
-        And(a=and13, b=notC, out=and14);
+        And(a=A, b=notB, out=and13);
+        And(a=and13, b=C, out=and14);
         And(a=and14, b=notD, out=temp7);
 
-        And(a=A, b=B, out=and15);
+        And(a=A, b=notB, out=and15);
         And(a=and15, b=C, out=and16);
-        And(a=and16, b=notD, out=temp8);
+        And(a=and16, b=D, out=temp8);
+
+        And(a=A, b=B, out=and17);
+        And(a=and17, b=notC, out=and18);
+        And(a=and18, b=notD, out=temp9);
+
+        And(a=A, b=B, out=and19);
+        And(a=and19, b=C, out=and20);
+        And(a=and20, b=notD, out=temp10);
+
+        And(a=A, b=B, out=and21);
+        And(a=and21, b=C, out=and22);
+        And(a=and22, b=D, out=temp11);
         
-        OR8(a=temp1, b=temp2, c=temp3, d=temp4, e=temp5, f=temp6, g=temp7, h=temp8, out=e);
+        Or(a=temp1, b=temp2, out=or1);
+        Or(a=temp3, b=temp4, out=or2);
+        Or(a=temp5, b=temp6, out=or3);
+        Or(a=temp7, b=temp8, out=or4);
+        Or(a=temp9, b=temp10, out=or5);
+        Or(a=or5, b=temp11, out=or6);
+        Or(a=or1, b=or2, out=oror1);
+        Or(a=or3, b=or4, out=oror2);
+        Or(a=oror2, b=or6, out=oror3);
+        Or(a=oror1, b=oror3, out=e);
 }
