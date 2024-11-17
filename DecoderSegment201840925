@@ -1,0 +1,27 @@
+CHIP DecoderSegment<your student number> {
+    IN A,B,C,D;
+    OUT e;
+    
+    PARTS:
+        Not(in=A, out=notA);
+        Not(in=B, out=notB);
+        Not(in=C, out=notC);
+        Not(in=D, out=notD);
+
+        And(a=notA, b=notB, c=notC, d=notD, out=temp1);
+        And(a=notA, b=notB, c=C, d=notD, out=temp2);
+        And(a=notA, b=B, c=C, d=notD, out=temp3);
+        And(a=A, b=~B, c=notC, d=notD, out=temp4);
+        And(a=A, b=notB, c=C, d=notD, out=temp5);
+        And(a=A, b=notB, c=C, d=D, out=temp6);
+        And(a=A, b=B, c=notC, d=notD, out=temp7);
+        And(a=A, b=B, c=C, d=notD, out=temp8);
+        
+        Or(a=temp1, b=temp2, out=or1);
+        Or(a=temp3, b=temp4, out=or2);
+        Or(a=temp5, b=temp6, out=or3);
+        Or(a=temp7, b=temp8, out=or4);
+        Or(a=or1, b=or2, out=oror1);
+        Or(a=or3, b=or4, out=oror2);
+        Or(a=oror1, b=oror2, out=e);
+}
