@@ -8,14 +8,37 @@ CHIP DecoderSegment201840925{
         Not(in=C, out=notC);
         Not(in=D, out=notD);
 
-        And(a=notA, b=notB, c=notC, d=notD, out=temp1);
-        And(a=notA, b=notB, c=C, d=notD, out=temp2);
-        And(a=notA, b=B, c=C, d=notD, out=temp3);
-        And(a=A, b=notB, c=notC, d=notD, out=temp4);
-        And(a=A, b=notB, c=C, d=notD, out=temp5);
-        And(a=A, b=notB, c=C, d=D, out=temp6);
-        And(a=A, b=B, c=notC, d=notD, out=temp7);
-        And(a=A, b=B, c=C, d=notD, out=temp8);
+        And(a=notA, b=notB, out=and1);
+        And(a=notC, b=and1, out=and2);
+        And(a=and2, b=notD, out=temp1);
+
+        And(a=notA, b=notB, out=and3);
+        And(a=and3, b=C, out=and4);
+        And(a=and4, b=notD, out=temp2);
+
+        And(a=notA, b=B, out=and5);
+        And(a=and5, b=C, out=and6);
+        And(a=and6, b=notD, out=temp3);
+
+        And(a=A, b=notB, out=and7);
+        And(a=and7, b=notC, out=and8);
+        And(a=and8, b=notD, out=temp4);
+        
+        And(a=A, b=notB, out=and9);
+        And(a=and9, b=C, out=and10);
+        And(a=and10, b=notD, out=temp5);
+
+        And(a=A, b=notB, out=and11);
+        And(a=and11, b=C, out=and12);
+        And(a=and12, b=D, out=temp6);
+
+        And(a=A, b=B, out=and13);
+        And(a=and13, b=notC, out=and14);
+        And(a=and14, b=notD, out=temp7);
+
+        And(a=A, b=B, out=and15);
+        And(a=and15, b=C, out=and16);
+        And(a=and16, b=notD, out=temp8);
         
         Or(a=temp1, b=temp2, out=or1);
         Or(a=temp3, b=temp4, out=or2);
