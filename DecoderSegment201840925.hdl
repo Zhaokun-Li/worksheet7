@@ -40,11 +40,5 @@ CHIP DecoderSegment201840925{
         And(a=and15, b=C, out=and16);
         And(a=and16, b=notD, out=temp8);
         
-        Or(a=temp1, b=temp2, out=or1);
-        Or(a=temp3, b=temp4, out=or2);
-        Or(a=temp5, b=temp6, out=or3);
-        Or(a=temp7, b=temp8, out=or4);
-        Or(a=or1, b=or2, out=oror1);
-        Or(a=or3, b=or4, out=oror2);
-        Or(a=oror1, b=oror2, out=e);
+        OR8(a=temp1, b=temp2, c=temp3, d=temp4, e=temp5, f=temp6, g=temp7, h=temp8, out=e);
 }
