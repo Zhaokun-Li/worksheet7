@@ -57,16 +57,16 @@ CHIP Decoder201840925{
         And(a=C,b=put21,out=put22);
         And(a=D,b=put22,out=secret12);
 
-        Or(a=secret1,b=secret2,out=final1)
-        Or(a=secret3,b=secret4,out=final2)
-        Or(a=secret5,b=secret6,out=final3)
-        Or(a=secret7,b=secret8,out=final4)
-        Or(a=secret9,b=secret10,out=final5)
-        Or(a=secret11,b=secret12,out=final6)
-        Or(a=final1,b=final2,out=stem1)
-        Or(a=final3,b=final4,out=stem2)
-        Or(a=final5,b=final6,out=stem3)
-        Or(a=stem1,b=stem2,out=stem4)
+        Or(a=secret1,b=secret2,out=final1);
+        Or(a=secret3,b=secret4,out=final2);
+        Or(a=secret5,b=secret6,out=final3);
+        Or(a=secret7,b=secret8,out=final4);
+        Or(a=secret9,b=secret10,out=final5);
+        Or(a=secret11,b=secret12,out=final6);
+        Or(a=final1,b=final2,out=stem1);
+        Or(a=final3,b=final4,out=stem2);
+        Or(a=final5,b=final6,out=stem3);
+        Or(a=stem1,b=stem2,out=stem4);
         Or(a=stem3,b=stem4,out=a);
 
 
