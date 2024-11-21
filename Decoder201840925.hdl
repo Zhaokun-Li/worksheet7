@@ -9,8 +9,8 @@ CHIP Decoder201840925{
         Not(in=D, out=notD);
 
         
-        And(a=notA,b=notB,out=put1);
-        And(a=C,b=put1,out=put2);
+        And(a=notA,b=B,out=put1);
+        And(a=notC,b=put1,out=put2);
         And(a=notD,b=put2,out=secret1);
 
         And(a=notA,b=notB,out=put3);
@@ -245,9 +245,8 @@ CHIP Decoder201840925{
         Or(a=ord5, b=tempd11, out=ord6);
         Or(a=ord1, b=ord2, out=orord1);
         Or(a=ord3, b=ord4, out=orord2);
-        Or(a=ord5, b=ord6, out=orord3);
         Or(a=orord1, b=orord2, out=ororord1);
-        Or(a=ororord1, b=orord3, out=d);
+        Or(a=ororord1, b=ord6, out=d);
 
 
 
