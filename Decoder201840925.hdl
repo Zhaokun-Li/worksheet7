@@ -1,6 +1,6 @@
 CHIP Decoder201840925{
     IN A,B,C,D;
-    OUT a ,b, c, d, e, f, g;
+    OUT a, b, c, d, e, f, g;
     
     PARTS:
         Not(in=A, out=notA);
