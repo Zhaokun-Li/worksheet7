@@ -323,7 +323,7 @@ CHIP Decoder201840925{
 
     And(a=A,b=notB,out=apple13);
     And(a=C,b=apple13,out=apple14);
-    And(a=notD,b=apple14,out=orrarnge7);
+    And(a=notD,b=apple14,out=orrange7);
 
     And(a=A,b=notB,out=apple15);
     And(a=C,b=apple15,out=apple16);
@@ -343,7 +343,7 @@ CHIP Decoder201840925{
 
     Or(a=orrange1,b=orrange2,out=juice1);
     Or(a=orrange3,b=juice1,out=juice2);
-    Or(a=secret4,b=juice2,out=juice3);
+    Or(a=orrange4,b=juice2,out=juice3);
     Or(a=orrange5,b=juice3,out=juice4);
     Or(a=orrange6,b=juice4,out=juice5);
     Or(a=orrange7,b=juice5,out=juice6);
