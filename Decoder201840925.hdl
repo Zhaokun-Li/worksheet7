@@ -72,7 +72,7 @@ CHIP Decoder201840925{
 
 
 
-                And(a=notA, b=notB, out=andb1);
+        And(a=notA, b=notB, out=andb1);
         And(a=notC, b=andb1, out=andb2);
         And(a=andb2, b=notD, out=tempb1);
 
@@ -196,7 +196,7 @@ CHIP Decoder201840925{
 
 
 
-                And(a=notA, b=notB, out=andd1);
+        And(a=notA, b=notB, out=andd1);
         And(a=notC, b=andd1, out=andd2);
         And(a=andd2, b=notD, out=tempd1);
 
