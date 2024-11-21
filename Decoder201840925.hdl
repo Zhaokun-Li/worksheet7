@@ -318,7 +318,7 @@ CHIP Decoder201840925{
     And(a=notD,b=apple10,out=orrange5);
 
     And(a=A,b=notB,out=apple11);
-    And(a=notC,b=apple11,out=qpple12);
+    And(a=notC,b=apple11,out=apple12);
     And(a=D,b=apple12,out=orrange6);
 
     And(a=A,b=notB,out=apple13);
