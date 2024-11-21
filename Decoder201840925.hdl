@@ -1,6 +1,6 @@
 CHIP Decoder201840925{
     IN A,B,C,D;
-    OUT a,b,f,d,e,f,g;
+    OUT a,b,c,d,e,f,g;
     
     PARTS:
         Not(in=A, out=notA);
@@ -426,4 +426,5 @@ CHIP Decoder201840925{
         Or(a=org3, b=org4, out=ororg2);
         Or(a=ororg1, b=ororg2, out=orororg1);
         Or(a=orororg1, b=org5, out=g);
+
 }
